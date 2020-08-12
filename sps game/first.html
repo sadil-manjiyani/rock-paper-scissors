@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock,Papper,Scissor</title>
+  <link href="style.css" rel="stylesheet" />
+  <script src="script.js"></script>
+  <script src="script2.js"></script>
+</head>
+
+<body>
+  <div class="score">
+    <span class="scoreboard" id="nameHere"></span>
+    <span id="player1" class="scoreboard">0</span>
+    <span class="scoreboard">:</span>
+    <span id="player2" class="scoreboard">0</span>
+    <label name="computer" class="scoreboard">Computer</label>
+  </div>
+
+  <div class="gamePlay">
+    <div id="computerplay">
+      <img src="rock.png" alt="computerImage" class="image" id="computermove" />
+    </div>
+    <div id="declareWinner"> </div>
+    <div id="playerplay">
+      <img src="paper.png" alt="playerImage" class="image" id="playermove" />
+    </div>
+    <div class="buttons">
+      <button id="rock" onclick="playerRock()">
+        <img src="rock.png" class="iconImg" />
+      </button>
+      <button id="paper" onclick="playerPaper()">
+        <img src="paper.png" class="iconImg" />
+      </button>
+      <button id="scissor" onclick="playerScissor()">
+        <img src="scissor.png" class="iconImg" />
+      </button>
+    </div>
+    <button id="playAgain" onclick="start()" disabled>Play Again</button>
+  </div>
+  <script>
+    display = window.localStorage.getItem('name');
+    document.getElementById('nameHere').innerHTML = display;
+
+  </script>
+</body>
+
+</html>
